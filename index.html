@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Hyo.js</title>
+</head>
+<body>
+
+  <div id="hyo"></div>
+
+<script src="lib/index.js"></script>
+<script>
+var hyo = new Hyo('hyo');
+var data = {
+  thead: {
+    tr: {
+      th: 'foo',
+      th: 'bar',
+      th: 'baz',
+    },
+  },
+  tbody: {
+    tr: {
+      td: 'Lorem',
+      td: 'Lorem',
+      td: 'Lorem',
+    },
+    tr: {
+      td: 'Lorem',
+      td: 'Lorem',
+      td: 'Lorem',
+    },
+    tr: {
+      td: 'Lorem',
+      td: 'Lorem',
+      td: 'Lorem',
+    },
+    tr: {
+      td: 'Lorem',
+      td: 'Lorem',
+      td: 'Lorem',
+    },
+  },
+};
+
+hyo.on('rendered', function() {
+  console.log('rendered');
+});
+hyo.render(data);
+</script>
+</body>
+</html>
